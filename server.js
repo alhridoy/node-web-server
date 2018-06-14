@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//for heroku
+const port = process.env.PORT || 3000 ;
 var apps = express();
 //templating engine let me do 
 /* A template engine enables you to use static template files in your application.
@@ -92,7 +94,7 @@ apps.get('/', (req,res)=>{
     })
 })
 
-apps.listen(3000, ()=> {
+apps.listen(port, ()=> {
 
-    console.log('Server on the port 3000');
+    console.log(`Server run on ${port}`);
 });

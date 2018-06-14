@@ -94,6 +94,14 @@ apps.get('/', (req,res)=>{
     })
 })
 
+apps.get('/projects', (req,res) => {
+ 
+    res.render('projects.hbs', {
+         
+        pageTitle:'Projects'
+    })
+
+})
 apps.listen(port, ()=> {
 
     console.log(`Server run on ${port}`);
